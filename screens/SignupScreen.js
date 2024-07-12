@@ -9,7 +9,14 @@ function SignupScreen() {
   //function called, user authenticated, created, authentication removed for next session
   async function SignUpHandler({ email, password }) {
     setIsAuthenticating(true);
-    await CreateUser(email, password);
+    try {
+      await CreateUser(email, password);
+    } catch (error) {
+      Alert.alert(
+        "Error Creating Account",
+        "Could not create user. Please check your credentials and try again."
+      );
+    }
     setIsAuthenticating(false);
   }
 
