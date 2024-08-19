@@ -17,7 +17,6 @@ function AuthContent({ isLogin, onAuthenticate }) {
   });
 
   function switchAuthModeHandler() {
-    // Todo
     if (isLogin) {
       navigation.replace("Signup");
     } else {
