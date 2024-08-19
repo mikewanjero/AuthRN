@@ -20,8 +20,8 @@ function SignupScreen() {
         "Error Creating Account",
         "Could not create user. Please check your credentials and try again."
       );
+      setIsAuthenticating(false);
     }
-    setIsAuthenticating(false);
   }
 
   if (isAuthenticating) {

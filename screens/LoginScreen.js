@@ -21,12 +21,12 @@ function LoginScreen() {
         "Authentication Error",
         "Could not login. Please check your credentials try again."
       );
+      setIsAuthenticating(false);
     }
-    setIsAuthenticating(false);
   }
 
   if (isAuthenticating) {
-    return <LoadingOverlay message="Logging in...." />;
+    return <LoadingOverlay message="Creating user...." />;
   }
 
   return <AuthContent isLogin onAuthenticate={loginHandler} />;
