@@ -45,11 +45,11 @@ function AuthenticatedStack() {
         name="Welcome"
         component={WelcomeScreen}
         options={{
-          headerRight: (tintColor) => (
+          headerRight: () => (
             <IconButton
               icon={"exit"}
               size={30}
-              color={tintColor}
+              color={"white"}
               onPress={authCtx.logout}
             />
           ),
